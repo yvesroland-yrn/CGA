@@ -224,7 +224,7 @@
     <!-- Team End -->
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5">
+    {{-- <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0">
@@ -294,7 +294,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Contact End -->
 
 

@@ -60,27 +60,47 @@
                     <div class="section-title position-relative mb-4">
                         <h1 class="display-4">Envoyez Un Message Aux Organisateurs</h1>
                     </div>
-                    <div class="contact-form">
-                        <form>
-                            <div class="row">
-                                <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Nom" required="required">
-                                </div>
-                                <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Email" required="required">
-                                </div>
+
+
+                  <!-- Affichage d’un message de succès si le mail a été envoyé -->
+                        @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                        @endif
+
+                        <!-- Formulaire d'envoi de message -->
+                        <form action="{{ route('contact.send') }}" method="POST">
+                        @csrf <!-- Protection CSRF obligatoire dans les formulaires Laravel -->
+
+                        <div class="row">
+                            <!-- Champ nom -->
+                            <div class="col-6 form-group">
+                                <input type="text" name="nom" class="form-control" placeholder="Nom" required>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Numero" required="required">
+                            
+                            <!-- Champ email -->
+                            <div class="col-6 form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Soumettre </button>
-                            </div>
+                        </div>
+
+                        <!-- Champ numéro -->
+                        <div class="form-group">
+                            <input type="text" name="numero" class="form-control" placeholder="Numéro" required>
+                        </div>
+
+                        <!-- Champ message -->
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                        </div>
+
+                        <!-- Bouton d'envoi -->
+                        <div>
+                            <button class="btn btn-primary py-3 px-5" type="submit">Soumettre</button>
+                        </div>
                         </form>
-                    </div>
+
                 </div>
             </div>
         </div>

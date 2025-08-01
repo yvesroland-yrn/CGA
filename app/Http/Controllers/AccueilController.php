@@ -20,7 +20,7 @@ class AccueilController extends Controller
 
     public function contact()
     {
-        // Logic for the contact page
+        // On retourne la vue 'Pages.contact'
         return view('Pages.contact');
     }
 }
