@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\emailContact;
 
 class ContactController extends Controller
 {
@@ -27,14 +28,10 @@ class ContactController extends Controller
             'contenu' => $request->message,
         ];
 
-            // MailHog intercepte les emails SMTP envoyés sur le port 1025
-            // et les affiche dans une interface web à l'adresse http://localhost:8025
-            // Aucun email réel n’est envoyé — utile pour tester sans utiliser Gmail.
-            Mail::send('emails.contact', $data, function ($message) use ($data) {
-                $message->to('test@juridiquo.test') // adresse factice (n'est pas utilisée réellement)
-                        ->subject('Nouveau message de contact');
-                $message->from($data['email'], $data['nom']);
-            });
+     
+
+        $emai = 'otnielgbeonh208@gmail.com';
+        Mail::send(new emailContact($request->email,$request->nom ));
 
         // Redirige avec un message de succès
         return back()->with('success', 'Votre message a été envoyé avec succès !');
