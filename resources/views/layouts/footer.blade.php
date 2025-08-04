@@ -29,9 +29,10 @@
                     <p><i class="fa fa-envelope mr-2"></i>yveskangra@gmail.com</p>
                     <div class="d-flex justify-content-start mt-4">
                         {{-- <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a> --}}
-                        <a class="text-white mr-4" href="https://facebook.com/lesalondescga"><i class="fab fa-2x fa-facebook-f"></i></a>
+                        <a class="text-white mr-4" href="https://www.facebook.com/LeSalondesCGA"><i class="fab fa-2x fa-facebook-f"></i></a>
                         <a class="text-white mr-4" href="https://www.linkedin.com/company/lesalondescga/"><i class="fab fa-2x fa-linkedin-in"></i></a>
-                        <a class="text-white" href="https://facebook.com/lesalondescga"><i class="fab fa-2x fa-instagram"></i></a>
+                        <a class="text-white mr-4" href="https://www.instagram.com/lesalondescga/"><i class="fab fa-2x fa-instagram"></i></a>
+                        <a class="text-white mr-4" href="https://www.youtube.com/@LeSalondesCGA"><i class="fab fa-2x fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
