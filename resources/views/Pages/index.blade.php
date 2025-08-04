@@ -16,7 +16,6 @@
     </div>
     <!-- Header End -->
 
-
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -26,7 +25,7 @@
                         <img src="img/about.jpg" alt="À propos" class="img-fluid w-100 h-100" style="object-fit: cover;">
                     </div>
                 </div>
-                
+
                 <div class="col-lg-7">
                     <div class="section-title position-relative mb-4">
                         <h1 class="display-4">EN  SAVOIR  PLUS  SUR  LES  CGA</h1>
@@ -85,7 +84,7 @@
                         <img src="img/feature.PNG" alt="Feature image" class="img-fluid w-100 h-100" style="object-fit: cover;">
                     </div>
                 </div>
-    
+
                 <!-- Texte ensuite -->
                 <div class="col-lg-7 my-5 pt-5 pb-lg-5 order-0 order-lg-1">
                     <div class="section-title position-relative mb-4">
@@ -132,7 +131,6 @@
             </div>
         </div>
     </div>
-    
     <!-- Feature Start -->
 
 
@@ -220,82 +218,55 @@
             </div>
         </div>
     </div>
-
     <!-- Team End -->
 
     <!-- Contact Start -->
-    {{-- <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="bg-light d-flex flex-column justify-content-center px-5" style="height: 450px;">
-                        <div class="d-flex align-items-center mb-5">
-                            <div class="btn-icon bg-primary mr-4">
-                                <i class="fa fa-2x fa-map-marker-alt text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Notre Localisation</h4>
-                                <p class="m-0">IMMEUBLE CAISTAB , ABIDJAN PLATEAU </p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-5">
-                            <div class="btn-icon bg-secondary mr-4">
-                                <i class="fa fa-2x fa-phone-alt text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Nos Contacts</h4>
-                                <p class="m-0">07 07 47 03 21 / 07 49 59 35 13
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="btn-icon bg-warning mr-4">
-                                <i class="fa fa-2x fa-envelope text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Email </h4>
-                                <p class="m-0">mabanamalan@gmail.com</p>
-                                <p class="m-0">yveskangra@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="section-title position-relative mb-4">
-                        <h1 class="display-4">Contactez Nous </h1>
-                    </div>
-                    <div class="contact-form">
-                        <form>
-                            <div class="row">
-                                <div class="col-6 form-group">
-                                    <input type="text"
-                                        class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                        placeholder=" Nom" required="required">
-                                </div>
-                                <div class="col-6 form-group">
-                                    <input type="email"
-                                        class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                        placeholder="Email" required="required">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                    placeholder="Numero" required="required">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message"
-                                    required="required"></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Soumettre</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        <div class="col-lg-5 mx-auto">
+     <div class="section-title position-relative mb-4 text-center">
+        <h1 class="display-5">Envoyez Un Message Aux Organisateurs</h1>
+    </div>
+
+    <!-- Message de succès -->
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Fermer">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+
+    <!-- Formulaire de contact -->
+    <form action="{{ route('contact.send') }}" method="POST" class="bg-light p-4 rounded shadow-sm">
+        @csrf
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" class="form-control" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Votre email" required>
             </div>
         </div>
-    </div> --}}
-    <!-- Contact End -->
 
+        <div class="form-group">
+            <label for="numero">Numéro</label>
+            <input type="text" name="numero" class="form-control" placeholder="Votre numéro" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" rows="5" class="form-control" placeholder="Votre message..." required></textarea>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-5">Soumettre</button>
+        </div>
+    </form>
+</div>
+
+   <!-- Contact End -->
 
 @endsection
