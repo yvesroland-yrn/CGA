@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <title>@yield('title')</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta name="keywords" content="entrepreneuriat, Côte d'Ivoire, CGA, PME, PMI, jeunes entrepreneurs, emploi, formation, comptabilité, relation professionnelle">
+    <meta name="description" content="Plateforme dédiée à la mise en relation entre les CGA de Côte d'Ivoire, les PME/PMI, les jeunes entrepreneurs, les chercheurs d'emploi et toute personne souhaitant se former ou s'informer sur l'entrepreneuriat et la comptabilité.">
+
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
